@@ -1,0 +1,22 @@
+.card {
+
+    ul {
+
+        li {
+
+            span.title-item-list {
+                color: $primary-color;
+                font-weight: $bold;
+            }
+        }
+    }
+}
+
+.btn-backHome {
+    padding-left: 0;
+
+    .btn-primary {
+        background-color: $primary-color;
+        border: 0;
+    }
+}

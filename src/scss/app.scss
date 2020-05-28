@@ -8,3 +8,29 @@
 
 //SECTION
 @import 'partials/header';
+@import 'partials/show';
+
+// INDEX
+
+.rooms_data {
+    
+    .table {
+
+        th {
+            vertical-align: middle;
+            background-color: $primary-color;
+            color: #fff;
+            padding-left: 10px;
+        }
+
+        td {
+            vertical-align: middle;
+            padding-left: 10px;
+        }
+        
+    }
+
+    &__title {
+        padding: 0;
+    }
+}
