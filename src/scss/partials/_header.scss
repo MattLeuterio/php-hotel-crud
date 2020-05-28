@@ -1,0 +1,14 @@
+.main-header {
+    padding: 10px 0;
+    .logo {
+
+        h1 {
+            font-weight: $bold;
+            color: $primary-color;
+
+            i {
+                font-weight: $regular;
+            }
+        }
+    }
+}
