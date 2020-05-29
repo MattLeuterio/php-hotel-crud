@@ -1,14 +1,8 @@
+
 .main-header {
-    padding: 10px 0;
-    .logo {
+    background-color: $primary-color;
 
-        h1 {
-            font-weight: $bold;
-            color: $primary-color;
-
-            i {
-                font-weight: $regular;
-            }
-        }
+    .navbar {
+        background: transparent;
     }
 }

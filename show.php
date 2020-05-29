@@ -6,12 +6,12 @@ include __DIR__ . '/partials/show/server-show.php';
 include __DIR__ . '/partials/template/head.php';
 ?>
 
-<main class="main-content container">
-        <?php // header
-        include __DIR__ . '/partials/template/header.php'
-        ?>
 
-<section class="room_data container mt-5">
+<?php // header
+include __DIR__ . '/partials/template/header.php'
+?>
+
+    <section class="room_data container mt-5">
         <div class="row">
             <div class="rooms_data__title col-10 offset-1 mb-2">
                 <h2>Info room <?php echo $room['room_number']; ?></h2>
@@ -35,9 +35,10 @@ include __DIR__ . '/partials/template/head.php';
                 </ul>
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row mt-4">
             <div class="btn-backHome col-10 offset-1 mb-2">
                 <a class="btn btn-primary" href="./" role="button">&lt; Home</a>
+                <a class="btn btn-success border-0"" href="./edit.php?id=<?php echo $room['id']; ?>" role="button"> Update</a>
             </div>
         </div>
         

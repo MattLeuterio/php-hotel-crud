@@ -5,13 +5,20 @@ include __DIR__ . '/partials/home/server-home.php';
 
 include __DIR__ . '/partials/template/head.php';
 ?>
-
-
     
-<main class="main-content container">
-        <?php // header
-        include __DIR__ . '/partials/template/header.php'
-        ?>
+
+<?php // header
+include __DIR__ . '/partials/template/header.php'
+?>
+
+<?php //allerts
+if( !empty($_GET['del']) ) { ?>
+
+    <div class="alert alert-success">
+        Stanza cancellata con successo
+    </div>
+
+<?php } ?>
 
     <section class="rooms_data container mt-5">
         <div class="row">
@@ -41,13 +48,20 @@ include __DIR__ . '/partials/template/head.php';
                                 <td><?php echo $room['room_number']; ?></td>
                                 <td><?php echo $room['floor']; ?></td>
                                 <td>
-                                    <a href="./show.php?id=<?php echo $room['id']; ?>"><button type="button" class="btn btn-primary">Info</button></a>
+                                    <a class="text-primary" href="./show.php?id=<?php echo $room['id']; ?>">
+                                        Info
+                                    </a>
                                 </td>
                                 <td>
-                                    <a href=""><button type="button" class="btn btn-success">Update</button></a>
+                                    <a class="text-success" href="./edit.php?id=<?php echo $room['id']; ?>">
+                                    Update</a>
                                 </td>
                                 <td>
-                                    <a href=""><button type="button" class="btn btn-danger">Delete</button></a>
+                                    <form action="./partials/delete/server-delete.php"
+                                        method="POST">
+                                        <input type="hidden" name="id" value="<?php echo $room['id']?>">
+                                        <input class="btn btn-danger" type="submit" value="Delete">
+                                    </form>
                                 </td>
                             </tr>
 

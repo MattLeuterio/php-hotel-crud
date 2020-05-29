@@ -9,8 +9,14 @@
 //SECTION
 @import 'partials/header';
 @import 'partials/show';
+@import 'partials/footer';
 
 // INDEX
+
+.main-content {
+    height: 100%;
+    min-height: calc(100vh - 148px);
+}
 
 .rooms_data {
     

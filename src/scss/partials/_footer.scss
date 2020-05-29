@@ -1,0 +1,13 @@
+footer {
+    height: 100px;
+    background-color: $primary-color;
+    color: #fff;
+
+    .container {
+        height: 100%;
+
+        .row {
+            height: 100%;
+        }
+    } 
+}
