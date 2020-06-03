@@ -32,6 +32,12 @@ include __DIR__ . '/partials/template/header.php'
                     <li class="list-group-item d-flex justify-content-between">
                         <span class="title-item-list">Floor:</span> <span><?php echo $room['floor']; ?></span>
                     </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span class="title-item-list">Created:</span> <span><?php echo $room['created_at']; ?></span></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span class="title-item-list">Updated:</span> <span><?php echo $room['updated_at']; ?></span></span>
+                    </li>
                 </ul>
             </div>
         </div>

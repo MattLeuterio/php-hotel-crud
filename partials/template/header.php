@@ -9,6 +9,12 @@
                     <li class="nav-item active">
                         <a class="nav-link" href=" <?php echo $base_path ?> ">All rooms</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href=" <?php echo $base_path; ?>new-room.php">New rooms</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href=" <?php echo $base_path; ?>booking.php">Booking</a>
+                    </li>
                 </ul>
             </nav>
         </div>

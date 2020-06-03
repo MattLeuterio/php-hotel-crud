@@ -2,6 +2,8 @@
 include_once __DIR__ . '/../../env.php';
 ?>
 
+</main>
+
 <footer class="main-footer mt-5">
     <div class="container">
         <div class="row d-flex align-items-center">

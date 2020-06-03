@@ -73,7 +73,7 @@ if( !empty($_GET['del']) ) { ?>
         </div>
     </section>
 
-</main>
+
 
 <?php // footer
     include __DIR__ . '/partials/template/footer.php';

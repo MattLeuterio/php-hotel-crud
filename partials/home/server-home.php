@@ -3,26 +3,36 @@
 //database
 include __DIR__ . '/../database.php';
 
+// Utilities
+include __DIR__ . '/../functions.php';
+
+
 // Query: lista stanze
-$querySQL = "SELECT * FROM `stanze`";
-$result = $connection->query($querySQL);
 
-if ($result && $result->num_rows > 0) {
-    $rooms = [];
-    while($row = $result->fetch_assoc()) {
+$rooms = getAll($connection, 'stanze');
+
+
+
+
+// $querySQL = "SELECT * FROM `stanze`";
+// $result = $connection->query($querySQL);
+
+// if ($result && $result->num_rows > 0) {
+//     $rooms = [];
+//     while($row = $result->fetch_assoc()) {
         
-        $rooms[] = $row;
+//         $rooms[] = $row;
 
-    }
+//     }
 
-} elseif ($result) {
+// } elseif ($result) {
 
-    echo 'no records found';
+//     echo 'no records found';
 
-} else {
+// } else {
 
-    echo 'query failed';
+//     echo 'query failed';
 
-};
+// };
 
-$connection->close();
+// $connection->close();

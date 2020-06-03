@@ -3,28 +3,34 @@
 //database
 include __DIR__ . '/../database.php';
 
-//room id
+// Utilities
+include __DIR__ . '/../functions.php';
+
+//get room ID from
 $id_room = $_GET['id'];
 
 // Query: lista stanze
-$querySQL = "SELECT * FROM `stanze` WHERE `id` = '$id_room'";
+$room = getById($connection, 'stanze', $id_room);
 
-$result = $connection->query($querySQL);
 
-if ($result && $result->num_rows > 0) {
+// $querySQL = "SELECT * FROM `stanze` WHERE `id` = '$id_room'";
+
+// $result = $connection->query($querySQL);
+
+// if ($result && $result->num_rows > 0) {
     
-    $room = $result->fetch_assoc(); 
+//     $room = $result->fetch_assoc(); 
         
 
 
-} elseif ($result) {
+// } elseif ($result) {
 
-    echo 'no records found';
+//     echo 'no records found';
 
-} else {
+// } else {
 
-    echo 'query failed';
+//     echo 'query failed';
 
-};
+// };
 
-$connection->close();
+// $connection->close();
